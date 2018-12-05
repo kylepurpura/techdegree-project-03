@@ -11,11 +11,11 @@
   <body>
     <form action="index.html" method="post">
       <div class="content">
-        <header>
+        <header class="center">
           <h1>THE CODE REVIEW</h1>
         </header>
 
-        <div class="intro">
+        <div class="intro center">
           <h2>Signup for our newsletter</h2>
           <p>Get the latest news on how your code is doing right in your inbox</p>
         </div>
@@ -24,13 +24,13 @@
           <h2>Contact Information</h2>
 
           <label for="name">Full Name</label>
-          <input type="text" id="name" name="user_full_name">
+          <input type="text" id="name" name="user_full_name" placeholder="Required">
 
           <label for="email">Email Address</label>
-          <input type="text" id="email" name="user_email">
+          <input type="text" id="email" name="user_email" placeholder="Required">
 
           <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="user_phone">
+          <input type="text" id="phone" name="user_phone">
 
           <label for="street">Street Address</label>
           <input type="text" id="street" name="user_street">
@@ -95,30 +95,30 @@
           </select>
 
           <label for="zipcode">Zip Code</label>
-          <input type="number" id="zipcode" name="user_zipcode">
+          <input type="text" id="zipcode" name="user_zipcode">
 
         </div>
 
-        <div id="secondary">
+        <div class="secondary">
           <h2>Newsletter</h2>
           <p>Select the newsletter(s) you would like to receive:</p>
 
-          <label class="label" for="html_news">HTML News</label>
           <input type="checkbox" id="html_news" value="checked_html_news" name="user_html_news">
+          <label for="html_news">HTML News</label><br>
 
-          <label class="label" for="css_news">CSS News</label>
           <input type="checkbox" id="css_news" value="checked_css_news" name="user_css_news">
+          <label for="css_news">CSS News</label><br>
 
-          <label class="label" for="javascript_news">Javascript News</label>
           <input type="checkbox" id="javascript_news" value="checked_javascript_news" name="user_javascript_news">
+          <label for="javascript_news">Javascript News</label>
 
           <p>Newsletter format</p>
 
-          <label class="label" for="html">HTML</label>
           <input type="radio" id="html" value="html" name="user_format">
+          <label for="html">HTML</label><br>
 
-          <label class="label" for="plain_text">Plain text</label>
           <input type="radio" id="plain_text" value="plain_text" name="user_format">
+          <label for="plain_text">Plain text</label><br>
 
           <p>Other topics you would like to hear about:</p>
           <textarea id="other_topics" name="user_other-topics"></textarea>
