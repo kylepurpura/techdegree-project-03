@@ -116,20 +116,27 @@
 
             <label for="javascript_news" class="checkboxContainer">Javascript News
               <input type="checkbox" id="javascript_news" value="true" name="user_javascript_news">
-              <span class="checkmark"></span>            
+              <span class="checkmark"></span>
             </label>
 
+          <div class="format">
+            <p>Newsletter format</p>
 
-          <p>Newsletter format</p>
+            <label for="html" class="radioContainer">HTML
+              <input type="radio" id="html" value="true" name="user_format">
+              <span class="circle"></span>
+            </label><br>
 
-          <input type="radio" id="html" value="true" name="user_format">
-          <label for="html">HTML</label><br>
+            <label for="plain_text" class="radioContainer">Plain text
+              <input type="radio" id="plain_text" value="true" name="user_format">
+              <span class="circle"></span>
+            </label><br>
+          </div>
 
-          <input type="radio" id="plain_text" value="true" name="user_format">
-          <label for="plain_text">Plain text</label><br>
-
-          <p>Other topics you would like to hear about:</p>
-          <textarea id="other_topics" name="user_other-topics"></textarea>
+          <div class="lgtextbox">
+            <p>Other topics you would like to hear about:</p>
+            <textarea id="other_topics" name="user_other-topics"></textarea>
+          </div>
 
           <button type="submit">Sign Up</button>
 

@@ -67,7 +67,6 @@ textarea {
   height: 125px;
   border-style: none;
   border-radius: 3px;
-  margin-top: -5px;
   margin-bottom: 30px;
   padding: 0px 10px;
   box-sizing: border-box;
@@ -81,10 +80,11 @@ button {
   font-size: 18px;
   border-style: none;
   border-radius: 3px;
+  margin-top: 5px;
 }
 
 footer {
-  margin-top: 30px;
+  margin-top: 40px;
   margin-bottom: 20px;
   text-align: center;
   font-size: 12px;
@@ -125,8 +125,14 @@ footer {
   padding-bottom: 30px;
 }
 
-.secondary {
+.secondary,
+.format,
+.lgtextbox {
   margin-top: 30px;
+}
+
+#zipcode {
+  width: 40%;
 }
 
 /**------Styled Checkboxes------**/
@@ -140,7 +146,7 @@ footer {
   padding-left: 25px;
   position: relative;
   cursor: pointer;
-  font-family: serif;
+  font-family: inherit;
   user-select: none;
 }
 
@@ -171,6 +177,50 @@ footer {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/**------Radio Button Styles------**/
+
+.radioContainer input {
+  display: none;
+}
+
+.radioContainer {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-family: inherit;
+  user-select: none;
+  padding-left: 25px;
+}
+
+.radioContainer .circle {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  border: 1px solid grey;
+}
+
+.radioContainer input:checked + .circle {
+  background-color: #2196fc;
+  border: 1px solid #2196fc;
+}
+
+.radioContainer input:checked + .circle::after {
+  content: "";
+  height: 6px;
+  width: 6px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  top: 49%;
+  left: 51%;
+  transform: translate(-50%, -50%);
 }
 
 /**------Styles------**/
