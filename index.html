@@ -103,21 +103,29 @@
           <h2>Newsletter</h2>
           <p>Select the newsletter(s) you would like to receive:</p>
 
-          <input type="checkbox" id="html_news" value="checked_html_news" name="user_html_news">
-          <label for="html_news">HTML News</label><br>
+            <label for="html_news" class="checkboxContainer">HTML News
+              <input type="checkbox" id="html_news" value="true" name="user_html_news">
+              <span class="checkmark"></span>
+            </label><br>
 
-          <input type="checkbox" id="css_news" value="checked_css_news" name="user_css_news">
-          <label for="css_news">CSS News</label><br>
+            <label for="css_news" class="checkboxContainer">CSS News
+              <input type="checkbox" id="css_news" value="true" name="user_css_news">
+              <span class="checkmark"></span>
+            </label><br>
 
-          <input type="checkbox" id="javascript_news" value="checked_javascript_news" name="user_javascript_news">
-          <label for="javascript_news">Javascript News</label>
+
+            <label for="javascript_news" class="checkboxContainer">Javascript News
+              <input type="checkbox" id="javascript_news" value="true" name="user_javascript_news">
+              <span class="checkmark"></span>            
+            </label>
+
 
           <p>Newsletter format</p>
 
-          <input type="radio" id="html" value="html" name="user_format">
+          <input type="radio" id="html" value="true" name="user_format">
           <label for="html">HTML</label><br>
 
-          <input type="radio" id="plain_text" value="plain_text" name="user_format">
+          <input type="radio" id="plain_text" value="true" name="user_format">
           <label for="plain_text">Plain text</label><br>
 
           <p>Other topics you would like to hear about:</p>
