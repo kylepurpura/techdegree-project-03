@@ -18,27 +18,39 @@ h2 {
 
 fieldset {
   border: none;
-  padding: 0px;
-  margin-right: 10px;
-  margin-top: 25px;
+  margin: 0 0;
+  padding: 0 0;
 }
 
 legend {
   font-size: 22px;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
-input[type="text"]  {
-  background-color: #D3D3D3;
-  padding-left: 10px;
-  width: 100%;
+input,
+select {
   height: 40px;
-  border-width: 0px;
-  border-style: none;
-  border-color: none;
-  border-image: none;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  padding-left: 15px;
+}
+
+input,
+select,
+textarea  {
+  background-color: #D3D3D3;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
   border-radius: 3px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border: 1px solid black;
+  outline: 0;
 }
 
 input::placeholder {
@@ -48,43 +60,15 @@ input::placeholder {
   padding-right: 25px;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-  border: 2px solid darkgrey;
-  outline: 0;
-}
-
-select {
-  background-color: #D3D3D3;
-  width: 102%;
-  height: 43px;
-  border-style: none;
-  border-radius: 3px;
-  font-size: 14px;
-  padding-left: 10px;
-}
-
 select,
 label,
 p {
   color: grey;
 }
 
-label {
-  margin-top: 15px;
-  margin-bottom: 5px;
-}
-
 textarea {
-  width: 102%;
-  background-color: #D3D3D3;
-  height: 125px;
-  border-style: none;
-  border-radius: 3px;
-  margin-bottom: 30px;
-  padding: 0px 10px;
-  box-sizing: border-box;
+  height: 80px;
+  margin-top: 12px;
 }
 
 button {
@@ -106,13 +90,17 @@ footer {
   font-style: italic;
 }
 
-.content {
-  margin: 10px 15px;
+.mainContent {
+  width: 90%;
+  margin: auto;
 }
 
 .intro {
+  margin: auto;
   position: relative;
   border-bottom: 1px solid #000;
+  text-align: center;
+  padding: 0px 25px 20px 25px;
 }
 
 .intro::before {
@@ -126,27 +114,42 @@ footer {
 }
 
 .intro h2 {
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 
 .intro p {
-  margin: 10px 20px 40px 20px;
+  margin-top: 0;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid #000;
-  padding-bottom: 30px;
+.top {
+  border-bottom: 1px solid black;
+  margin-top: 20px;
 }
 
-.format,
+.bottom {
+  margin-top: 20px;
+}
+
+.bottom legend {
+  margin-bottom: 5px;
+}
+
 .lgtextbox {
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #zipcode {
-  width: 40%;
+  display: block;
+  width: 30%;
+}
+
+/**------Positioning------**/
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /**------Styled Checkboxes------**/
@@ -157,6 +160,7 @@ footer {
 
 .checkboxContainer {
   display: inline-block;
+  margin-bottom: 15px;
   padding-left: 25px;
   position: relative;
   cursor: pointer;
@@ -205,6 +209,7 @@ footer {
   cursor: pointer;
   font-family: inherit;
   user-select: none;
+  margin-bottom: 15px;
   padding-left: 25px;
 }
 
@@ -237,12 +242,27 @@ footer {
   transform: translate(-50%, -50%);
 }
 
-/**------Styles------**/
+/**------Media Query------**/
+@media (min-width: 768px) {
 
-.center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  .mainContent {
+    max-width: 768px;
+  }
+
+  .top label {
+    display: inline-block;
+    width: 160px;
+    text-align: left;
+  }
+
+  .top input,
+  .top select {
+    display: inline-block;
+    width: 600px;
+  }
+
+  #zipcode {
+    display: inline-block;
+  }
+
 }
