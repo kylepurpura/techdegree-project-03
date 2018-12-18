@@ -100,13 +100,7 @@ footer {
   font-size: 12px;
   font-style: italic;
 }
-/**
-.mainbkgrnd {
-  width: 95%;
-  margin: 0 auto;
-  background-color: #fdf5e6;
-}
-**/
+
 .mainContent {
   width: 90%;
   margin: auto;
@@ -164,7 +158,6 @@ footer {
 }
 
 #zipcode {
-  display: block;
   width: 30%;
 }
 
@@ -268,11 +261,7 @@ footer {
 
 /**------Media Query------**/
 @media (min-width: 768px) {
-/**
-  .mainbkgrnd {
-    max-width: 800px;
-  }
-**/
+
   .mainContent {
     max-width: 768px;
   }
@@ -284,16 +273,17 @@ footer {
   .top div {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
     align-items: center;
   }
 
   .top label {
-    width: 240px;
+    flex-basis: 30%;
     height: 40px;
     margin-bottom: 0;
   }
 
-  
+  .ziplabel {
+    margin-right: -51px;
+  }
 
 }
