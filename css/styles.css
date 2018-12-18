@@ -25,15 +25,24 @@ fieldset {
 legend {
   font-size: 22px;
   font-weight: bold;
-  margin-bottom: 20px;
+}
+input:required,
+select:required {
+  border-left: 3px solid maroon;
+}
+
+input:valid,
+select:valid {
+  border-left: 3px solid darkgreen;
+}
+
+input:optional {
+  border-left: none;
 }
 
 input,
 select {
   height: 40px;
-  margin-top: 12px;
-  margin-bottom: 20px;
-  padding-left: 15px;
 }
 
 input,
@@ -44,7 +53,7 @@ textarea  {
   width: 100%;
   box-sizing: border-box;
   border-radius: 3px;
-
+  padding-left: 15px;
 }
 
 input:focus,
@@ -70,7 +79,7 @@ p {
 textarea {
   height: 80px;
   margin-top: 12px;
-  padding: 15px 15px;
+  padding-top: 15px;
 }
 
 button {
@@ -91,7 +100,13 @@ footer {
   font-size: 12px;
   font-style: italic;
 }
-
+/**
+.mainbkgrnd {
+  width: 95%;
+  margin: 0 auto;
+  background-color: #fdf5e6;
+}
+**/
 .mainContent {
   width: 90%;
   margin: auto;
@@ -126,14 +141,21 @@ footer {
 .top {
   border-bottom: 1px solid black;
   margin-top: 20px;
+  padding-bottom: 30px;
+}
+
+.top div {
+  display: flex;
+  flex-direction: column;
+}
+
+.top label {
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 
 .bottom {
-  margin-top: 20px;
-}
-
-.bottom legend {
-  margin-bottom: 5px;
+  margin-top: 25px;
 }
 
 .lgtextbox {
@@ -246,25 +268,32 @@ footer {
 
 /**------Media Query------**/
 @media (min-width: 768px) {
-
+/**
+  .mainbkgrnd {
+    max-width: 800px;
+  }
+**/
   .mainContent {
     max-width: 768px;
   }
 
+  .top legend {
+    margin-bottom: 10px
+  }
+
+  .top div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
   .top label {
-    display: inline-block;
-    width: 160px;
-    text-align: left;
+    width: 240px;
+    height: 40px;
+    margin-bottom: 0;
   }
 
-  .top input,
-  .top select {
-    display: inline-block;
-    max-width: 600px;
-  }
-
-  #zipcode {
-    display: inline-block;
-  }
+  
 
 }
